@@ -21,6 +21,7 @@ changeCode.addEventListener('click', () => {
     secretText.innerHTML = "";
     popup.style.display = "block"; 
     changeCode.style.display = "none";
+    confetti.stop();
 });
 
 window.addEventListener('keyup', (e) => {
