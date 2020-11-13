@@ -11,7 +11,7 @@ button.addEventListener('click', () => {
         return;
     }
     secretCode = input.value.toLowerCase();
-    secretText.innerHTML = `Type the code now to see magic!`;
+    secretText.innerHTML = `Type the secret code now to see magic!`;
     input.value = '';
     popup.style.display = "none";
     changeCode.style.display = "block";
