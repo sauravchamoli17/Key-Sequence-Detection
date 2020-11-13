@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Sequence Detection</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<style>
+    @font-face {
+      src: url('./Calibre-Regular.ttf');
+      font-family: Calibre;
+    }
+    body{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Calibre;
+        background: #2193b0;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     }
+     h1{
+         color:#fff;
+         text-align: center;
+         font-size: 50px;
+         margin:10px 0px 10px 0px;
+         text-transform: uppercase;
+     }
+     h2{
+         color:#fff;
+         font-size:28px;
+         margin:20px 0px 20px 0px;
+     }
+     h3{
+         margin:0;
+         text-align: center;
+         color:#fff;
+         font-size:24px;
+         margin-bottom:20px;
+     }
+     input{
+         display: block;
+         width:60%;
+         margin:0 auto;
+         border:none;
+         outline:none;
+         height:2em;
+         padding-left:15px;
+         font-family:Calibre;
+         font-size: 24px;
+         line-height: 30px;
+     }
+     ::placeholder {
+        font-size: 24px;
+        line-height: 30px;
+      }
+     .popup{
+         display:flex;
+         flex-direction: column;
+         background:rgba(219, 219, 219, 0.287);
+         padding: 30px;
+         border-radius:5px;
+     }
+     button{
+         display: block;
+         width:30%;
+         height:2em;
+         margin:0 auto;
+         margin-top:20px;
+         cursor:pointer;
+         outline:transparent;
+         padding:0;
+         font-family: Calibre;
+         font-size:20px;
+         border:none;
+         border-radius: 4px;
+     }
+     button:hover{
+         background: rgb(255, 255, 255);
+     }
+     .change__code{
+         display:none;
+         margin-top:10px;
+         width:15%;
+     }
+
+</style>
+<body>
+    <h1>key sequence detection</h1>
+    <h2 class="secret__code"></h2>
+    <button class="change__code" type="button">Change Secret Code</button>
+    <div class="popup">
+        <h2>Create a secret code (max 10 characters).</h2>
+        <input type="text" maxlength="10" placeholder="Create a secret code!">
+        <button class="submit" type="button">Submit</button>
+    </div>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
+</body>
+</html>
